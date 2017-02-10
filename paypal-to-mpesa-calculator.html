@@ -1,0 +1,61 @@
+<html> 
+<head>
+  <script type="text/javascript">
+
+//<![CDATA[
+
+function multiplyBy()
+{
+        num1 = document.getElementById("firstNumber").value=100;
+        num2 = document.getElementById("secondNumber").value;
+
+document.getElementById("result").innerHTML = (num1 * num2) - (num2 * 10);
+    if (document.getElementById("secondNumber").validity.rangeUnderflow) {
+       txt = "Value too small";
+    }
+    document.getElementById("result").innerHTML = txt;
+}
+
+function Retry()
+{
+        num1 = document.getElementById("firstNumber").value=100;
+        num2 = document.getElementById("secondNumber").value;
+
+document.getElementById("result").innerHTML = (num1 * num2) - (num2 * 10);
+  if (document.getElementById("secondNumber").validity.rangeUnderflow) {
+       txt = "Value too small";
+    }
+    document.getElementById("result").innerHTML = txt;
+}
+//]]>
+</script> 
+  <script type="text/javascript">
+
+//<![CDATA[
+
+//Character count script
+function countit(what){
+formcontent=what.form.charcount.value
+what.form.displaycount.value=formcontent.length
+}
+
+//]]>
+</script> 
+<style type="text/css">
+body {margin: 30px;}
+</style> 
+</head>
+<body>
+<form>
+<input type="hidden" id="firstNumber"/><br>
+2nd Number: <input type="number" id="secondNumber" min="20"/><br>
+<input type="button" onClick="multiplyBy()" Value="Multiply"/>
+<input type="button" onClick="Retry()" Value="Retry"/>
+</form>
+<span id="demo"></span>
+
+<p>The Result is : <br>
+<span id="result"></span>
+</p>
+</body>
+</html>
